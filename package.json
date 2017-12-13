@@ -1,0 +1,26 @@
+{
+  "name": "zoho-node-sdk",
+  "version": "0.1.0",
+  "description": "Zoho Node.js SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/stria/zoho-node-sdk.git"
+  },
+  "keywords": [
+    "zoho",
+    "report",
+    "node",
+    "sdk",
+    "javascript"
+  ],
+  "author": "Paul Holden",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/stria/zoho-node-sdk#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
