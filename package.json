@@ -21,6 +21,9 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/stria/zoho-node-sdk#readme",
   "dependencies": {
+    "async": "^2.6.0",
+    "dotenv": "^4.0.0",
+    "lodash": "^4.17.4",
     "request": "^2.83.0"
   }
 }
