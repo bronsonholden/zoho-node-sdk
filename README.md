@@ -94,6 +94,11 @@ Zoho app. Place the resulting auth token in the appropriate environment
 variable in your `.env` file. See [here](https://www.zoho.com/recruit/helpnew/job-boards-resumes/resume-management/resume-extractor/resume-extractor-delete-auth-token.html) for information on deleting auth tokens to
 revoke access to your apps.
 
+Note: It is possible to generate a single authtoken for multiple scopes, if
+you wish to use multiple Zoho apps under a single user. This is currently not
+directly supported by the token generation tool, but you can easily modify the
+script to use whatever scope(s) you want.
+
 ```javascript
 node tool/gentoken.js
 ```
