@@ -1,4 +1,4 @@
-const zoho = require('./');
+const zoho = require('../');
 const async = require('async');
 
 async.waterfall([
