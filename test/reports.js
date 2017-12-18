@@ -12,12 +12,36 @@ async.waterfall([
 		});
 	},
 	(reports, callback) => {
-		reports.databases((err, dbnames) => {
+		reports.table('Test', 'Zoho Tickets', (err, t) => {
 			if (err) {
 				return callback(err);
 			}
 
-			console.log(dbnames);
+			callback(null, t);
+		});
+	},
+	(t, callback) => {
+		t.truncate([
+			{
+				'Status': 'Open',
+				'Ticket Subject': 'Ticket #1',
+				'Ticket Owner': 'John Doe',
+				'Ticket Created Time': '12/01/2017 09:35 AM',
+				'Reference Id': 1234567890
+			},
+			{
+				'Status': 'Closed',
+				'Ticket Subject': 'Ticket #2',
+				'Ticket Owner': 'John Doe',
+				'Ticket Created Time': '12/01/2017 09:35 AM',
+				'Reference Id': 1234567890
+			}
+		], (err, result) => {
+			if (err) {
+				return callback(err);
+			}
+
+			console.log(result);
 			callback();
 		});
 	}
