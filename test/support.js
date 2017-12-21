@@ -3,7 +3,7 @@ const zoho = require('../');
 const fs = require('fs');
 
 async.waterfall([
-	(callback) => zoho.support(callback),
+	(callback) => zoho.support(process.env.ZOHO_SUPPORT_EMAIL_ID, process.env.ZOHO_SUPPORT_AUTHTOKEN, callback),
 	(support, callback) => support.organization('Stria', callback),
 	(org, callback) => {
 		org.tickets((err, tickets) => {
