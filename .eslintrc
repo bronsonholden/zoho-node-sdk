@@ -1,0 +1,14 @@
+{
+  "extends": "standard",
+  "rules": {
+    "semi": [ 2, "always" ],
+    "indent": [ 2, 2, {
+      "SwitchCase": 0
+    }],
+    "space-before-function-paren": [ 2, {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }]
+  }
+}

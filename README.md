@@ -1,6 +1,10 @@
 Zoho Node.js SDK
 ================
 
+[![NPM](https://nodei.co/npm/zoho-node-sdk.png)](https://nodei.co/npm/zoho-node-sdk/)
+
+[![dependencies Status](https://david-dm.org/paulholden2/zoho-node-sdk/status.svg)](https://david-dm.org/paulholden2/zoho-node-sdk)
+
 A simple SDK for using the REST API for Zoho apps. Any inconsistencies in
 Zoho's various APIs are abstracted away, and a consistent, easy-to-use
 interface is presented in this SDK.
@@ -15,7 +19,7 @@ To connect:
 ```javascript
 const zoho = require('zoho-node-sdk');
 
-zoho.support((err, support) => {
+zoho.support('email@website.com', 'authtoken_here', (err, support) => {
 
 });
 ```
@@ -23,18 +27,18 @@ zoho.support((err, support) => {
 To list tickets:
 
 ```javascript
-zoho.support((err, support) => {
-	support.tickets('MyOrg', (err, tickets) => {
-		console.log(tickets);
-	});
+zoho.support('email@website.com', 'authtoken_here', (err, support) => {
+  support.tickets('MyOrg', (err, tickets) => {
+    console.log(tickets);
+  });
 
-	// Or
+  // Or
 
-	support.organization('MyOrg', (err, org) => {
-		org.tickets((err, tickets) => {
-			console.log(tickets);
-		});
-	});
+  support.organization('MyOrg', (err, org) => {
+    org.tickets((err, tickets) => {
+      console.log(tickets);
+    });
+  });
 });
 ```
 
@@ -45,26 +49,26 @@ To connect and add a row to a table:
 ```javascript
 const zoho = require('zoho-node-sdk');
 
-zoho.reports((err, reports) => {
-	reports.database('MyDB', (err, db) => {
-		db.table('MyTable', (err, t) => {
-			t.addrow({
-				'MyCol': 'MyVal'
-			}, (err, rows) => {
-				console.log('done');
-			});
-		});
-	});
+zoho.reports('email@website.com', 'authtoken_here', (err, reports) => {
+  reports.database('MyDB', (err, db) => {
+    db.table('MyTable', (err, t) => {
+      t.addrow({
+        'MyCol': 'MyVal'
+      }, (err, rows) => {
+        console.log('done');
+      });
+    });
+  });
 
-	// Or
+  // Or
 
-	reports.table('MyDB', 'MyTable', (err, t) => {
-		t.addrow({
-			'MyCol': 'MyVal'
-		}, (err, rows) => {
-			console.log('done');
-		});
-	});
+  reports.table('MyDB', 'MyTable', (err, t) => {
+    t.addrow({
+      'MyCol': 'MyVal'
+    }, (err, rows) => {
+      console.log('done');
+    });
+  });
 });
 ```
 
