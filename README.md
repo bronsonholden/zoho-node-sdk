@@ -92,5 +92,4 @@ Example output:
 ```
 Your ZohoReports/reportsapi auth token: 8d071f5ae72592dd4c6f45414c82c0d7
 Your ZohoSupport/supportapi auth token: 895ef8b3c02ab0b2d99d1b028bd78173
-
 ```
