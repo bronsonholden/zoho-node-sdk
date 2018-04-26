@@ -3,7 +3,7 @@ Zoho Node.js SDK
 
 [![NPM](https://nodei.co/npm/zoho-node-sdk.png)](https://nodei.co/npm/zoho-node-sdk/)
 
-[![dependencies Status](https://david-dm.org/paulholden2/zoho-node-sdk/status.svg)](https://david-dm.org/paulholden2/zoho-node-sdk)
+[![dependencies Status](https://david-dm.org/paulholden2/zoho-node-sdk/status.svg)](https://david-dm.org/paulholden2/zoho-node-sdk) [![devDependencies Status](https://david-dm.org/paulholden2/zoho-node-sdk/dev-status.svg)](https://david-dm.org/paulholden2/zoho-node-sdk?type=dev)
 
 A simple SDK for using the REST API for Zoho apps. Any inconsistencies in
 Zoho's various APIs are abstracted away, and a consistent, easy-to-use
