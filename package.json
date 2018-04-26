@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/stria/zoho-node-sdk.git"
+    "url": "git+ssh://git@github.com/paulholden2/zoho-node-sdk.git"
   },
   "keywords": [
     "zoho",
@@ -20,7 +20,7 @@
   ],
   "author": "Paul Holden",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/stria/zoho-node-sdk#readme",
+  "homepage": "https://github.com/paulholden2/zoho-node-sdk#readme",
   "dependencies": {
     "async": "^2.6.0",
     "csvjson": "^5.0.0",
