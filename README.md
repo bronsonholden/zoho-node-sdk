@@ -23,7 +23,7 @@ zoho.support('email@website.com', 'authtoken_here', (err, support) => {
 });
 ```
 
-#### Llist tickets
+#### List tickets
 
 ```javascript
 zoho.support('email@website.com', 'authtoken_here', (err, support) => {
