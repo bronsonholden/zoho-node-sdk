@@ -9,12 +9,11 @@ A simple SDK for using the REST API for Zoho apps. Any inconsistencies in
 Zoho's various APIs are abstracted away, and a consistent, easy-to-use
 interface is presented in this SDK.
 
-Examples
-========
+# Examples
 
 ## Support
 
-To connect:
+#### Connect
 
 ```javascript
 const zoho = require('zoho-node-sdk');
@@ -24,7 +23,7 @@ zoho.support('email@website.com', 'authtoken_here', (err, support) => {
 });
 ```
 
-To list tickets:
+#### Llist tickets
 
 ```javascript
 zoho.support('email@website.com', 'authtoken_here', (err, support) => {
@@ -44,7 +43,7 @@ zoho.support('email@website.com', 'authtoken_here', (err, support) => {
 
 ## Reports
 
-To connect and add a row to a table:
+#### Connect and add a row to a table
 
 ```javascript
 const zoho = require('zoho-node-sdk');
@@ -72,7 +71,7 @@ zoho.reports('email@website.com', 'authtoken_here', (err, reports) => {
 });
 ```
 
-## Token Generation
+# Token Generation
 
 Simple tool to generate auth tokens for use with the API for each respective
 Zoho app. See [here](https://www.zoho.com/recruit/helpnew/job-boards-resumes/resume-management/resume-extractor/resume-extractor-delete-auth-token.html) for information on deleting auth tokens to
@@ -83,11 +82,13 @@ you wish to use multiple Zoho apps under a single user. This is currently not
 directly supported by the token generation tool, but you can easily modify the
 script to use whatever scope(s) you want.
 
+#### Run
+
 ```javascript
 node tool/gentoken.js
 ```
 
-Example output:
+#### Example output
 
 ```
 Your ZohoReports/reportsapi auth token: 8d071f5ae72592dd4c6f45414c82c0d7
